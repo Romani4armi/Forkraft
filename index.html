@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Счет</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #8d8b8b;
+            padding: 20mm;
+        }
+        .contejner{
+            width: 210mm;
+            min-height: 297mm;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 15mm;
+            position: relative;
+        }
+        table{
+            border-spacing: 0px;
+            border-collapse: collapse;
+            font-size: 15px;
+            }
+       .table_1{
+        border: 1px solid black;
+        width: 180mm;
+        margin:  auto;
+        margin-bottom: 4mm;
+       }
+       td{
+        border:1px solid black;
+        padding: 0 1mm;
+       }
+       .header{
+        padding: 1px;
+       }
+       .NDS{
+        display: flex;
+       }
+       .NDS :first-child  {
+        width: 46mm;
+       
+        
+       }
+       .NDS :last-child {
+        font-weight: 900;
+       
+       }
+       .Oll{
+        display: flex;
+        margin-top: 5mm;
+        margin-bottom: 10mm;
+       }
+       .Oll :first-child{
+        width: 46mm;
+       }
+       .Oll :last-child{
+        font-weight: 900;
+       
+       }
+       .attention{
+        display: flex;
+        margin-top: 5mm;
+       }
+       .attention :first-child{
+        width: 60mm;
+        font-weight: 900;
+       }
+       .get_product{
+        display: flex;
+        margin-top: 5mm;
+        font-weight: 900;
+        font-size: 12px;
+        margin-bottom: 5mm;
+       }
+       .get_product :first-child{
+        width: 60mm;
+       
+       }
+       .product_have{
+        margin-left: 20mm;
+       }
+      .MP{
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        font-weight: 900;
+        margin-top: 10mm;
+      }
+      .MP  div{
+        width: 70mm;
+        text-align: center;
+      }
+      .table_2{
+        font-size: 12px;
+        text-align: center;
+      }
+      hr{
+        border: none; /* Убираем границу для браузера Firefox */
+        color:black; /* Цвет линии для остальных браузеров */
+        background-color: black; /* Цвет линии для браузера Firefox и Opera */
+        height: 2px; /
+      }
+      
+      .select_product{
+        position: absolute;
+        width: 50mm;
+        background-color: white;
+        border: solid 1px black;
+        border-radius: 5px;
+        display: none;
+        top: 85%;
+        cursor: pointer;
+      }
+  
+      .selectPruductID{
+        width: 49mm;
+        min-height:9mm;
+        border: none;
+        position: absolute;
+        top:0px;
+        left:0px;
+       
+        padding-left: 5px;
+      }
+      .productDivId{
+        display: none;
+        position: relative;
+        width: 50mm;
+        
+      }
+      .option_product{
+        width:50mm;
+        height: 10mm;
+        padding: 2mm;
+        vertical-align:middle;
+      }
+      .option_product:hover {
+        background-color:#8d8b8b;
+      }
+      input{
+        font-size: 11px;
+        border: none;
+        z-index: 0;
+        height: 8mm;
+      }
+      .UnitID{
+        width: 13mm;
+        border: none;
+      }
+      input:focus{
+        outline: none
+      }
+      .unit_dropdown{
+        position: absolute;
+        width: 13mm;
+       
+        display: none;
+        background-color: #ffffff;
+        border: solid 1px black;
+        border-radius: 5px;
+        cursor: pointer;
+        top: 85%;
+        
+      }
+      .unit_selected{
+        vertical-align:middle;
+        height: 7mm;
+        padding: 1mm;
+      }
+      .unit_selected:hover{
+        background-color: #8d8b8b;
+      }
+     .quantity_inputID{
+        border: none;
+        width: 13mm;
+        text-align: center;
+     }
+     .quantity_selected{
+        width: 18mm;
+      
+        position: absolute;
+        top: 85%;
+        left: 0mm;
+        background-color: #ffffff;
+        border: solid 1px black;
+        border-radius: 5px;
+       
+        display: none;
+        z-index: 1;
+        cursor: pointer;
+     }
+     
+     .quantity_option{
+        height: 7mm;
+        width: 18mm;
+        padding: 1mm;
+        cursor: pointer;
+     }
+     .quantity_option:hover{
+        background-color: #8d8b8b;
+     }
+     .NDS_input{
+        width: 13mm;
+        border: none;
+        text-align: center;
+     }
+     .priceProductID{
+        width: 20mm;
+        height: 9mm;
+        border: none;
+     }
+     #fieldResult{
+        position: absolute;
+        width: 10mm;
+        height: 10mm;
+        font-size: 10mm;
+        top: -13px;
+        left: -35px;
+        cursor: pointer;
+     }
+     #fieldResult:hover{
+        font-weight: 900;
+        
+     }
+     .deleteStringID{
+        position: absolute;
+        font-size: 10mm;
+        cursor: pointer;
+        top:-5px;
+        left: 75px;
+     }
+     .deleteStringID:hover{
+        font-weight: 900;
+     }
+     .price_litr{
+        width: 15mm;
+        text-align: right;
+     }
+     .NDS_Summ_Input,.summa_input{
+        text-align: right;
+     }
+     .NDS_Summ_Input{
+        width: 62px;
+     }
+     input::-webkit-outer-spin-button,
+     input::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+    input:disabled{
+        background-color: #ffffff;
+        color: black;
+    }
+    #kopiaChekaInput{
+        font-size: 4mm;
+        font-weight: 700;
+        text-align: center;
+    }
+    #schet_protocol div{
+        cursor: pointer;
+        margin: 5px;
+    }
+    #kopiaChekaInput{
+        width: 230px;
+        cursor: pointer;
+    }
+    #checkQulity,#checkQulity2{
+        display: none;
+       margin-bottom: 3mm;
+       position: relative;
+    }
+    #platDok{
+        position: absolute;
+        font-size: 10mm;
+        top: -4mm;
+        left: 181mm;
+        cursor: pointer;
+    }
+    #platDok:hover{
+        font-weight: 900;
+    }
+    #platDocPlus{
+        position: absolute;
+        font-size: 10mm;
+        top:-3mm;
+        left:-9mm;
+        cursor: pointer;
+    }
+    #platDocPlus:hover{
+        font-weight: 900;
+    }
+    .underline{
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+    .kursiValut{
+        position: absolute;
+        top: -45px;
+        left: 130px;
+        color: green;
+    }
+    #kopiaChekaInput{
+        position: relative;
+    }
+    .displayNone{
+        display: none;
+
+    }
+    .displayBlock{
+        display: block;
+    }
+      @media print {
+	html, body{
+		height: 297mm;
+		width: 210mm;
+	}
+    @page {
+	margin: 0 0 0 0;
+}
+@media print {
+	.kursiValut{
+        display: none;
+    }
+    body {
+        width: auto;
+		margin: 0;
+		padding: 0
+    }
+    #fieldResult,.deleteStringID{
+        display: none;
+    }
+    #platDocPlus,#platDok{
+        display: none;
+    }
+
+}
+}
+    </style>
+</head>
+<body>
+    
+    <div class="contejner">
+        <div class="kursiValut">
+
+        </div>
+        <div class="header">
+            <table class="table_1">
+                <tr style="height: 43mm;">
+                    <td style="width: 20mm;"> <b>Поставщик и его адрес:</b></td>
+                    <td style="width: 90mm;"> <b>Общество с ограниченной ответственностью «Форкрафт» </b><br>
+                        220089, г. Минск, ул. Железнодорожная, дом № 27В, комн. 201 <br>
+                        р/с № BY47PJCB30120542131000000933, Банк: «Приорбанк» ОАО ЦБУ 117 пр.Независимости 172. г. Минск БИК PJCBBY2X <br>
+
+                        E-mail: info@forkraft.by <br>
+                        УНП 192969581
+                        </td>
+                    <td id="DataNow" style="text-align: center;">
+                        </td>
+                </tr>
+                <tr style="height:12mm;">
+                    <td><b>Покупатель и его адрес:</b></td>
+                    
+                    <td colspan="2" style="font-size: 12px;"><b>
+                        <input type="text" value="РЕАЛИЗАЦИЯ ЧЕРЕЗ ИНТЕРНЕТ-МАГАЗИН " style="width: 580px; font-weight: 600; font-size: 12px;"> <br> АДРЕС ДОСТАВКИ: 
+                    <input type="text" value="САМОВЫВОЗ" style="height:5mm ; font-size:12PX ; width: 460px;">
+                    </b></td>
+                    
+                </tr>
+            </table>
+        </div>
+        <div>
+            <table class="table_1 table_2" id="Table2">
+                <tr  style="height: 10mm;">
+                    <td style="width: 50mm;">Предмет счета</td>
+                    <td style="width: 13mm;">Ед. изм.</td>
+                    <td style="width: 18mm;">Количество</td>
+                    <td style="width: 20mm;">Отпускная цена</td>
+                    <td style="width: 20mm;">Отпускная стоимость</td>
+                    <td style="width: 14mm;">Ставка НДС, %</td>
+                    <td style="width: 20mm;">Сумма НДС</td>
+                    <td>Сумма с НДС</td>
+                </tr>
+
+
+
+                <tr style="height: 4mm;" id="resultTable">
+                    <td colspan="4" style="text-align: left;position: relative" >
+                        <div id="fieldResult">+</div>
+                        <b>Итого:</b></td>
+                    <td style="text-align: right;"><b id="stoimSumout">0</b></td>
+                    <td><b>x</b></td>
+                    <td style="text-align: right;"><b id="NDSsumout">0</b></td>
+                    <td style="text-align: right;"><b id="sumSumout">0</b></td>
+                </tr>
+            </table>
+        </div>
+        <div class="NDS">
+            <div  style="font-size: 12px;"><b>Сумма НДС:</b> 	</div>
+            <div id="summaNDSItog"  class="underline">Ноль рублей ноль копеек</div>
+        </div>
+        <div class="Oll">
+            <div  style="font-size: 12px;"><b>Всего</b>:</div>
+            <div id="summaOut" class="underline">Ноль рублей ноль копеек</div>
+        </div>
+        <div class="attention" id="attentionId">
+            <div>ВНИМАНИЕ</div>
+            <div id="sevenDay"></div>
+        </div>
+        <div id="checkQulity2" style="display: none;">
+            * Не является платежным документом. Без кассового чека недействителен 
+            <div id="platDok">
+                -
+            </div>
+        </div>
+        <div id="checkQulity">
+            *Товар проверен и принят по качеству и количству. С итоговой суммой и изменниями (при их наличии) согласен.
+            <div id="platDocPlus" >
+                +
+            </div>
+        </div>
+        <div class="get_product">
+            <div>При получении товара необходимо: </div>
+            <div >
+                <div><b>1. Иметь при себе</b></div>
+                <div class="product_have"><b>а) подписанный экземпляр счета-протокола</b></div>
+                <div class="product_have"><b>б) доверенность</b></div>
+                <div>2. Знать УНП</div>
+            </div>
+        </div>
+        <div class="MP">
+            <div><b>Поставщик <br>
+                <br><br>
+                <div style="border-bottom: 1px solid black;"></div>
+                <br><br><div style="border-bottom: 1px solid black;"></div><br>
+                <b>МП</b>
+            </b></div>
+            <div><b>Плательщик</b> <br><br><br><div style="border-bottom: 1px solid black;"></div><br><br><div style="border-bottom: 1px solid black;"></div><br><b>МП</b></div>
+        </div>
+    </div>
+    
+    <script src="./price.js"></script>
+    <script>
+          function get(data)   {
+            data+=604800000
+            
+               data = new Date(data)
+              
+                return data
+                }
+
+const data7day = get(new Date().getTime());
+                console.log(data7day)
+         localStorage.counter == 'NaN' ? localStorage.counter = 1 : true     
+        
+        let counterString = 0;
+        const DataNow = document.getElementById('DataNow');
+        const month = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря']
+        DataNow.innerHTML=`<b><div>
+        
+        <div style="position:relative;cursor: pointer;">
+            
+                <div onclick="schetprotocolFF()" id="schetprotocolID">СЧЕТ-ПРОТОКОЛ</div>
+                <div  onclick="kopiachekaFF()" style="display:none;" id="kopiachekaID">ТОВАРНЫЙ ЧЕК</div>
+            
+            
+        </div>
+       
+    </div>
+    <div id="soglosCen">
+                        согласования свободных договорных цен на товары (продукцию)</div>
+                        № <input type="text" style="font-weight: 800;font-size:12px ;    width: 80px;" value =" 00${(new Date().getMonth()*1)+(new Date().getDate()*1)}${localStorage.counter=localStorage.counter*1+2}"  > <br/>
+                        от <input type="text" style="font-weight: 600;width:140px; font-size:12px" value=" ${new Date().getDate()} ${month[new Date().getMonth()]} ${new Date().getFullYear()}г."> </b>`
+
+     
+                        document.getElementById('sevenDay').innerHTML = `
+                Счет действителен до: ${data7day.getDate()} ${month[data7day.getMonth()]} ${data7day.getFullYear()}г.
+                `
+         
+       const tableStringF = (a) => {
+            const tableString = document.createElement('tr');
+           
+            tableString.style.height = '10mm'
+            tableString.innerHTML =`
+                    <td style="text-align: left; position: relative;" id="SelectTd${a}">
+                       
+                        <div id='productDiv${a}' class="productDivId"></div>    
+                       <input type="text" placeholder="Выберие товар" class="selectPruductID" id="selectPruduct${a}" >
+                      
+                    </td>
+                    <td style="position: relative;">
+                       <input type="text" placeholder=""id="Unit${a}"  class="UnitID">
+                     
+                    </td>
+                    <td id="quantityId${a}" style="position: relative;">
+                        <input type="number" min="0"  value="0" id="quantity_input${a}" class="quantity_inputID">
+                        
+                    </td>
+                    <td style="text-align: right; position: relative;">
+                        <input type="number" min="0" value="0" id="priceLitr${a}"  step="0.01" class="price_litr">     
+                    </td>
+                    <td style="text-align: right;  position: relative;">
+                        <input type="number" style="text-align: right" id="priceProduct${a}" disabled value="0" step="0.01" class="priceProductID">
+                    </td>
+                    <td style=" position: relative;"><input type="number" value="20" min="0" max="100" class="NDS_input" id="NDSinput${a}"></td>
+                    <td style="text-align: right;"><input type="number" value="0" min="0" max="100" disabled class="NDS_Summ_Input" id="NDSSummInput${a}"></td>
+                    <td style="text-align: right; position:relative"> 
+                        <input type="number" value="0" min="0" max="1000000" disabled class="summa_input" id="summaInput${a}">
+                        <div id="deleteString${a}" class="deleteStringID"> - </div>    
+                    </td>
+            `
+            document.getElementById('resultTable').before(tableString)
+            const select = document.createElement('div') //родительский выпадающий блок товаров
+            select.style.zIndex = 100-a
+                const inputProdukt = document.getElementById('selectPruduct'+a)
+                
+                inputProdukt.addEventListener('blur',()=>{
+                    document.getElementById('productDiv'+a).style.display = 'block'
+                    document.getElementById('productDiv'+a).innerText = inputProdukt.value
+                    inputProdukt.style.display = 'none'
+                })
+                document.getElementById('productDiv'+a).addEventListener('click',()=>{
+                    inputProdukt.value = document.getElementById('productDiv'+a).innerText
+                    inputProdukt.style.display = 'block';
+                    inputProdukt.focus()
+                    document.getElementById('productDiv'+a).style.display = 'none'
+                })
+                inputProdukt.parentElement.addEventListener('click',(e)=>{
+                    select.style.display === 'block'? select.style.display = 'none':select.style.display = 'block'
+                    e.stopPropagation()
+                })
+            const selectTd = document.getElementById('SelectTd'+a)// element table for selekt-input
+           
+            const unitSelected = document.getElementById('Unit'+a) // инпут для едениц измерения
+            select.className = 'select_product'
+                selectTd.appendChild(select)
+                const unitDiv = document.createElement('div') // всплывающее окно едениц измерения
+                unitDiv.style.zIndex=100-a
+                    unitDiv.className = 'unit_dropdown'
+                    unitSelected.parentElement.appendChild(unitDiv)
+                    unitDiv.innerHTML = `
+                    <div class="unit_selected" id="LitrID${a}"> Л </div>
+                    <div class="unit_selected" id="StId${a}"> Шт </div>
+                    `
+                    document.getElementById('LitrID'+a).addEventListener('click',(e)=>{
+                      
+                        document.getElementById('Unit'+a).value = e.target.innerHTML
+                        summaFF()
+                    })
+                    document.getElementById('StId'+a).addEventListener('click',(e)=>{
+                       
+                        document.getElementById('Unit'+a).value = e.target.innerHTML
+                        summaFF()
+                    })
+                    
+            //заполнение товаров
+                priceImpra.forEach((item,i,arr)=>{
+                    const option = document.createElement('div') //элемент дробдауна товаров
+                
+                    option.className = 'option_product'
+                    option.style.color=item.color
+                    select.appendChild(option)
+                    option.innerHTML = item.product
+                    document.getElementById('selectPruduct'+a).addEventListener('input',()=>{
+                        document.querySelector('.select_product').style.display = 'none'
+                    })
+                    option.addEventListener('click',(e)=>{
+                      
+                        document.getElementById('selectPruduct'+a).value=item.product
+                        document.getElementById('productDiv'+a).innerHTML = item.product
+                        select.style.display = 'none'
+                        
+                        e.stopPropagation()
+                    
+                       
+                        unitSelected.value=item.unit
+                        quantityInput.value = item.quantity[0]
+                        document.getElementById('priceProduct'+a).value = item.selligPrice[0] / 1.2
+                        document.getElementById('priceProduct'+a).value =(document.getElementById('priceProduct'+a).value * 1).toFixed(2)
+
+                        document.getElementById('priceLitr'+a).value =  document.getElementById('priceProduct'+a).value /  document.getElementById('quantity_input'+a).value 
+                        document.getElementById('priceLitr'+a).value =(document.getElementById('priceLitr'+a).value*1).toFixed(2)
+                        document.getElementById('NDSSummInput'+a).value = document.getElementById('priceProduct'+a).value *   document.getElementById('NDSinput'+a).value /100
+                        document.getElementById('NDSSummInput'+a).value =(document.getElementById('NDSSummInput'+a).value*1).toFixed(2)
+                        document.getElementById('summaInput'+a).value = document.getElementById('priceProduct'+a).value * 1 +   document.getElementById('NDSSummInput'+a).value * 1
+                        document.getElementById('summaInput'+a).value =(document.getElementById('summaInput'+a).value*1).toFixed(2)
+                        summaFF()
+                    })
+                    })
+                // количество товара автозаполнение
+                    const quantityInput = document.getElementById('quantity_input'+a); 
+                    const quantityTd = document.getElementById('quantityId'+a);
+                    const quantitySelected = document.createElement('div');
+                
+                    quantityTd.appendChild(quantitySelected);
+                    quantityTd.addEventListener('click',e=>{               
+                            priceImpra.forEach((item,i,arr)=>{
+                                if (item.product === inputProdukt.value){
+                                    quantitySelected.innerHTML=''
+                                    
+                                    item.quantity.forEach(item2=>{
+                                        const div = document.createElement('div')
+                                        div.className = 'quantity_option'
+                                        div.innerText = item2
+                                        quantitySelected.appendChild(div)
+                                        
+                                    
+                                        div.addEventListener('click',()=>{
+                                            
+                                            quantityInput.value = div.innerText
+                                            item.quantity.forEach((item3,i)=>{
+
+
+                                                
+                                                if (item3 == quantityInput.value){
+                                                    document.getElementById('priceProduct'+a).value = item.selligPrice[i]/1.2
+                                                    document.getElementById('priceProduct'+a).value = ( document.getElementById('priceProduct'+a).value * 1).toFixed(2)
+                                                }
+                                                
+                                            })
+                                            document.getElementById('priceLitr'+a).value =  document.getElementById('priceProduct'+a).value /  document.getElementById('quantity_input'+a).value
+                                            document.getElementById('priceLitr'+a).value =(document.getElementById('priceLitr'+a).value*1).toFixed(2)
+                                            document.getElementById('NDSSummInput'+a).value = document.getElementById('priceProduct'+a).value *   document.getElementById('NDSinput'+a).value /100
+                                            document.getElementById('NDSSummInput'+a).value =(document.getElementById('NDSSummInput'+a).value*1).toFixed(2)
+                                            document.getElementById('summaInput'+a).value = document.getElementById('priceProduct'+a).value * 1 +   document.getElementById('NDSSummInput'+a).value * 1
+                                            document.getElementById('summaInput'+a).value =(document.getElementById('summaInput'+a).value*1).toFixed(2)
+                                            summaFF()
+                                        
+                                        })
+                                        
+                                    })
+                                }
+                            })
+                        e.stopPropagation()
+                        quantitySelected.style.display === 'block'?quantitySelected.style.display = 'none':quantitySelected.style.display = 'block'
+                    })
+                    document.getElementById('NDSinput'+a).addEventListener('input',()=>{
+                        document.getElementById('NDSSummInput'+a).value = document.getElementById('priceProduct'+a).value *   document.getElementById('NDSinput'+a).value /100
+                                            document.getElementById('NDSSummInput'+a).value =(document.getElementById('NDSSummInput'+a).value*1).toFixed(2)
+                                            document.getElementById('summaInput'+a).value = document.getElementById('priceProduct'+a).value * 1 +   document.getElementById('NDSSummInput'+a).value * 1
+                                            document.getElementById('summaInput'+a).value =(document.getElementById('summaInput'+a).value*1).toFixed(2)
+                                            summaFF()
+                    })
+                    document.getElementById('priceLitr'+a).addEventListener('input',()=>{
+                                            document.getElementById('priceProduct'+a).value = document.getElementById('priceLitr'+a).value *  document.getElementById('quantity_input'+a).value 
+                                            document.getElementById('priceProduct'+a).value = (document.getElementById('priceProduct'+a).value*1).toFixed(2)
+                                            document.getElementById('NDSSummInput'+a).value = document.getElementById('priceProduct'+a).value *   document.getElementById('NDSinput'+a).value /100
+                                            document.getElementById('NDSSummInput'+a).value =(document.getElementById('NDSSummInput'+a).value*1).toFixed(2)
+                                            document.getElementById('summaInput'+a).value = document.getElementById('priceProduct'+a).value * 1 +   document.getElementById('NDSSummInput'+a).value * 1
+                                            document.getElementById('summaInput'+a).value =(document.getElementById('summaInput'+a).value*1).toFixed(2)
+                                            summaFF()
+                    })
+                    quantitySelected.className='quantity_selected'
+                        
+                    const quantityArr = [0.75,1,2.5,5,10,20]
+                    quantityArr.forEach(item=>{
+                        const div = document.createElement('div');
+                        div.className = "quantity_option"
+                        quantitySelected.appendChild(div)
+                        div.innerText = item;
+                        div.addEventListener('click', e => {
+                            quantityInput.value = e.target.innerHTML
+                        })
+                    })
+                   
+                    
+                    
+                //заполнение единиц измерения
+                unitSelected.parentElement.addEventListener('click',e=>{
+                    unitDiv.style.display === 'block'? unitDiv.style.display = 'none':unitDiv.style.display = 'block'
+                    e.stopPropagation()
+                })
+             
+               
+             
+                
+            
+                document.addEventListener('click',()=>{
+                    select.style.display = 'none'
+                    unitDiv.style.display = 'none'
+                    quantitySelected.style.display = 'none'
+
+                })
+            document.getElementById('deleteString'+a).addEventListener('click',(e)=>{
+                confirm('действительно удалить?')?e.target.parentElement.parentElement.remove():true
+                summaFF()
+                
+            })
+            document.getElementById('quantity_input'+a).addEventListener('input',() => {
+                
+                        const arr =  document.querySelectorAll('.quantity_selected')
+                       
+                        for (let i=0; i < arr.length; i++){
+                            arr[i].style.display = 'none'
+                            
+                        }
+                        
+                        document.getElementById('priceProduct'+a).value = document.getElementById('quantity_input'+a).value * document.getElementById('priceLitr'+a).value;
+                        document.getElementById('priceProduct'+a).value =  (document.getElementById('priceProduct'+a).value * 1).toFixed(2)
+                        document.getElementById('NDSSummInput'+a).value = document.getElementById('priceProduct'+a).value *   document.getElementById('NDSinput'+a).value /100
+                        document.getElementById('NDSSummInput'+a).value =(document.getElementById('NDSSummInput'+a).value*1).toFixed(2)
+                        document.getElementById('summaInput'+a).value = document.getElementById('priceProduct'+a).value * 1 +   document.getElementById('NDSSummInput'+a).value * 1
+                        document.getElementById('summaInput'+a).value =(document.getElementById('summaInput'+a).value*1).toFixed(2)
+                        summaFF()
+            })
+       }
+    
+        document.getElementById('fieldResult').addEventListener('click',()=>{
+            tableStringF(++counterString)
+            generationEventFF()
+
+        })
+       tableStringF(0)
+       // объявление массивов для вывода прописью
+       Number.prototype.toPhrase=function(c)
+// сумма прописью для чисел от 0 до 999 триллионов
+// можно передать параметр "валюта": RUB,USD,EUR (по умолчанию RUB)
+    {
+        var x=this.toFixed(2);
+        if (x<0 || x>999999999999999.99) return false;
+
+        var currency='RUB';
+        if (typeof(c)=='string')
+            currency=c.trimAll().toUpperCase();
+
+        if (currency=='RUR') currency='RUB';
+        if (currency!='RUB' && currency!='USD' && currency!='EUR')
+            return false;
+
+        var groups=new Array();
+
+        groups[0]=new Array();
+        groups[1]=new Array();
+        groups[2]=new Array();
+        groups[3]=new Array();
+        groups[4]=new Array();
+
+        groups[9]=new Array();
+
+// рубли
+// по умолчанию
+        groups[0][-1]={'RUB': 'рублей', 'USD': 'долларов США', 'EUR': 'евро'};
+//исключения
+        groups[0][1]={'RUB': 'рубль', 'USD': 'доллар США', 'EUR': 'евро'};
+        groups[0][2]={'RUB': 'рубля', 'USD': 'доллара США', 'EUR': 'евро'};
+        groups[0][3]={'RUB': 'рубля', 'USD': 'доллара США', 'EUR': 'евро'};
+        groups[0][4]={'RUB': 'рубля', 'USD': 'доллара США', 'EUR': 'евро'};
+
+// тысячи
+// по умолчанию
+        groups[1][-1]='тысяч';
+//исключения
+        groups[1][1]='тысяча';
+        groups[1][2]='тысячи';
+        groups[1][3]='тысячи';
+        groups[1][4]='тысячи';
+
+// миллионы
+// по умолчанию
+        groups[2][-1]='миллионов';
+//исключения
+        groups[2][1]='миллион';
+        groups[2][2]='миллиона';
+        groups[2][3]='миллиона';
+        groups[2][4]='миллиона';
+
+// миллиарды
+// по умолчанию
+        groups[3][-1]='миллиардов';
+//исключения
+        groups[3][1]='миллиард';
+        groups[3][2]='миллиарда';
+        groups[3][3]='миллиарда';
+        groups[3][4]='миллиарда';
+
+// триллионы
+// по умолчанию
+        groups[4][-1]='триллионов';
+//исключения
+        groups[4][1]='триллион';
+        groups[4][2]='триллиона';
+        groups[4][3]='триллиона';
+        groups[4][4]='триллиона';
+
+// копейки
+// по умолчанию
+        groups[9][-1]={'RUB': 'копеек', 'USD': 'центов', 'EUR': 'центов'};
+//исключения
+        groups[9][1]={'RUB': 'копейка', 'USD': 'цент', 'EUR': 'цент'};
+        groups[9][2]={'RUB': 'копейки', 'USD': 'цента', 'EUR': 'цента'};
+        groups[9][3]={'RUB': 'копейки', 'USD': 'цента', 'EUR': 'цента'};
+        groups[9][4]={'RUB': 'копейки', 'USD': 'цента', 'EUR': 'цента'};
+
+// цифры и числа
+// либо просто строка, либо 4 строки в хэше
+        var names=new Array();
+        names[1]={0: 'один', 1: 'одна', 2: 'один', 3: 'один', 4: 'один'};
+        names[2]={0: 'два', 1: 'две', 2: 'два', 3: 'два', 4: 'два'};
+        names[3]='три';
+        names[4]='четыре';
+        names[5]='пять';
+        names[6]='шесть';
+        names[7]='семь';
+        names[8]='восемь';
+        names[9]='девять';
+        names[10]='десять';
+        names[11]='одиннадцать';
+        names[12]='двенадцать';
+        names[13]='тринадцать';
+        names[14]='четырнадцать';
+        names[15]='пятнадцать';
+        names[16]='шестнадцать';
+        names[17]='семнадцать';
+        names[18]='восемнадцать';
+        names[19]='девятнадцать';
+        names[20]='двадцать';
+        names[30]='тридцать';
+        names[40]='сорок';
+        names[50]='пятьдесят';
+        names[60]='шестьдесят';
+        names[70]='семьдесят';
+        names[80]='восемьдесят';
+        names[90]='девяносто';
+        names[100]='сто';
+        names[200]='двести';
+        names[300]='триста';
+        names[400]='четыреста';
+        names[500]='пятьсот';
+        names[600]='шестьсот';
+        names[700]='семьсот';
+        names[800]='восемьсот';
+        names[900]='девятьсот';
+
+        var r='';
+        var i,j;
+
+        var y=Math.floor(x);
+
+// если НЕ ноль рублей
+        if (y>0)
+        {
+            // выделим тройки с руб., тыс., миллионами, миллиардами и триллионами
+            var t=new Array();
+
+            for (i=0;i<=4;i++)
+            {
+                t[i]=y%1000;
+                y=Math.floor(y/1000);
+            }
+
+            var d=new Array();
+
+            // выделим в каждой тройке сотни, десятки и единицы
+            for (i=0;i<=4;i++)
+            {
+                d[i]=new Array();
+                d[i][0]=t[i]%10; // единицы
+                d[i][10]=t[i]%100-d[i][0]; // десятки
+                d[i][100]=t[i]-d[i][10]-d[i][0]; // сотни
+                d[i][11]=t[i]%100; // две правых цифры в виде числа
+            }
+
+            for (i=4; i>=0; i--)
+            {
+                if (t[i]>0)
+                {
+                    if (names[d[i][100]])
+                        r+=' '+ ((typeof(names[d[i][100]])=='object')?(names[d[i][100]][i]):(names[d[i][100]]));
+
+                    if (names[d[i][11]])
+                        r+=' '+ ((typeof(names[d[i][11]])=='object')?(names[d[i][11]][i]):(names[d[i][11]]));
+                    else
+                    {
+                        if (names[d[i][10]]) r+=' '+ ((typeof(names[d[i][10]])=='object')?(names[d[i][10]][i]):(names[d[i][10]]));
+                        if (names[d[i][0]]) r+=' '+ ((typeof(names[d[i][0]])=='object')?(names[d[i][0]][i]):(names[d[i][0]]));
+                    }
+
+                    if (names[d[i][11]])  // если существует числительное
+                        j=d[i][11];
+                    else
+                        j=d[i][0];
+
+                    if (groups[i][j])
+                    {
+                        if (i==0)
+                            r+=' '+groups[i][j][currency];
+                        else
+                            r+=' '+groups[i][j];
+                    }
+                    else
+                    {
+                        if (i==0)
+                            r+=' '+groups[i][-1][currency];
+                        else
+                            r+=' '+groups[i][-1];
+                    }
+                }
+                
+            }
+
+            if (t[0]==0)
+                r+=' '+groups[0][-1][currency];
+        }
+        else
+            r='Ноль '+groups[0][-1][currency];
+            
+        y=((x-Math.floor(x))*100).toFixed();
+        if (y<10) y='0'+y;
+
+        r=r.trim();
+        r=r.substr(0,1).toUpperCase()+r.substr(1);
+        
+       r+=' '
+        if (y==0){
+            r+=' ноль'
+        } else {
+            if (y==1){
+                r+=' одна'
+            } else {
+                if (y==2){
+                    r+=' две'
+                } else {
+                if (y<21){
+                    r+=' '+names[(y*1)]
+                } else{
+                   
+                   r+=' ' + names[(Math.floor(y/10))*10] 
+                   r+= ' '
+                   r+= ' ' + (y%10)==0?'':(y%10)==1?' одна':(y%10)==2?' две':names[y%10]+' '
+                }
+            }}
+        }
+        
+       
+        y=y*1;
+
+        if (names[y])  // если существует числительное
+            j=y;
+        else
+            j=y%10;
+
+        if (groups[9][j])
+            r+=' '+groups[9][j][currency];
+        else
+            r+=' '+groups[9][-1][currency];
+
+        return r;
+    }
+
+       //
+    
+      
+       summaFF = () => {
+        const arrStoim = document.querySelectorAll('.priceProductID')
+            const arrNDS = document.querySelectorAll('.NDS_Summ_Input')
+            const arrSum = document.querySelectorAll('.summa_input')
+            let stoimSum = 0
+            let NDSsum = 0
+            let sumSum = 0
+            for (let i=0; i<arrSum.length; i++){
+                stoimSum+=arrStoim[i].value*1
+                NDSsum+=arrNDS[i].value*1
+                sumSum+=arrSum[i].value*1
+               
+            }
+            document.getElementById('stoimSumout').innerText = stoimSum.toFixed(2)
+            document.getElementById('NDSsumout').innerText = NDSsum.toFixed(2)
+            document.getElementById('sumSumout').innerText = sumSum.toFixed(2)
+
+            //вывод прописью
+           
+
+            document.getElementById('summaNDSItog').innerText = NDSsum.toPhrase()
+            document.getElementById('summaOut').innerText = sumSum.toPhrase()
+               }
+               schetprotocolFF = e => {
+
+                    document.getElementById('soglosCen').style.display = 'none'
+                    document.getElementById('kopiachekaID').style.display = 'block'
+                    document.getElementById('schetprotocolID').style.display = 'none'
+                    document.getElementById('attentionId').style.display = 'none'
+                    document.querySelector('.get_product').style.display = 'none'
+                    document.getElementById('checkQulity').style.display = 'block'
+                    document.getElementById('platDocPlus').style.className = 'displayNone'
+               }
+               kopiachekaFF = e => {
+                  
+                    document.getElementById('soglosCen').style.display = 'block'
+                    document.getElementById('kopiachekaID').style.display = 'none'
+                    document.getElementById('schetprotocolID').style.display = 'block'
+                    document.getElementById('attentionId').style.display = 'flex'
+                    document.querySelector('.get_product').style.display = 'flex'
+                    document.getElementById('checkQulity').style.display = 'none'
+                    document.getElementById('checkQulity2').style.display = 'none'
+               }
+              
+               document.getElementById('platDok').addEventListener('click',(e)=>{
+                e.target.parentElement.style.display='none'
+                document.getElementById('platDocPlus').style.className = 'displayBlock'
+               })
+               document.getElementById('platDocPlus').addEventListener('click',e=>{
+                document.getElementById('checkQulity2').style.display = 'block'
+                document.getElementById('platDocPlus').style.className = 'displayNone'
+               })
+               generationEventFF = () => {
+                    const arrInputs =  [...document.querySelectorAll('input')]
+                        arrInputs.forEach(item=>{
+                                item.addEventListener('keyup',(e)=>{
+                                    if ( e.keyCode == 13 || e.keyCode == 27){
+                                        
+                                        e.target.parentElement.lastElementChild.style.display = 'none'
+                                    } 
+                                })
+                        })
+               }
+               generationEventFF()
+               
+    </script>
+</body>
+</html>
