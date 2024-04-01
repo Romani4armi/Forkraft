@@ -303,7 +303,7 @@ const priceImpra = [
         product:"REMMERS ACRYL 100",
         unit:"Шт",
         quantity:[1],
-        selligPrice:[33.79],
+        selligPrice:[37.18],
         color: 'red'
     }
 ]
