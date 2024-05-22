@@ -122,7 +122,7 @@ const priceImpra = [
         quantity:[5,20],
         selligPrice:[0,0],
         color: 'green',
-        evro:[9,65,9.02]
+        evro:[9.65,9.02]
     },
     {
         product:"Impra impralan-Vorlack V100",
