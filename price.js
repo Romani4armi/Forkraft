@@ -270,7 +270,7 @@ const priceImpra = [
     }
 ]
 
-fetch('https://api.nbrb.by/exrates/rates?periodicity=0').then(async(result) => {
+ /*fetch('https://api.nbrb.by/exrates/rates?periodicity=0').then(async(result) => {
   // результат запроса
   if (result.status === 200 && result.ok) {
     // превращение в JSON
@@ -284,7 +284,9 @@ fetch('https://api.nbrb.by/exrates/rates?periodicity=0').then(async(result) => {
 }).catch((error) => {
   // обработка ошибок
   alert('курсы не получены, попробуйте перезагрузить либо введите цены вручную')
-})
+ 
+})*/
+
 
 const  kursValutDiv =  document.querySelector('.kursiValut')
 
@@ -302,3 +304,4 @@ updateArrFF = kurs =>{
     })
 }
 
+updateArrFF(4)
