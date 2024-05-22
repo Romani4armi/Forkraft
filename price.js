@@ -112,7 +112,7 @@ const priceImpra = [
         product:"Impra impralan-Natureffekrlasur S510 укрывной",
         unit:"Л",
         quantity:[5,20],
-        selligPrice:[0],
+        selligPrice:[0,0],
         color: 'green',
         evro:[11.9,11.19]
     },
@@ -120,7 +120,7 @@ const priceImpra = [
         product:"Impra impralan-Decklack D150",
         unit:"Л",
         quantity:[5,20],
-        selligPrice:[0],
+        selligPrice:[0,0],
         color: 'green',
         evro:[9,65,9.02]
     },
@@ -128,7 +128,7 @@ const priceImpra = [
         product:"Impra impralan-Vorlack V100",
         unit:"Л",
         quantity:[5,20],
-        selligPrice:[0],
+        selligPrice:[0,0],
         color: 'green',
         evro:[10.88,10.17]
     },
@@ -136,7 +136,7 @@ const priceImpra = [
         product:"Impra impralan-Vorlack V710",
         unit:"Л",
         quantity:[5,20],
-        selligPrice:[0],
+        selligPrice:[0,0],
         color: 'green',
         evro:[12.96,11.78]
     },
