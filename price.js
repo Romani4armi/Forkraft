@@ -267,6 +267,13 @@ const priceImpra = [
         quantity:[1],
         selligPrice:[37.18],
         color: 'red'
+    },
+    {
+        product:"BHC ACRYL PRO",
+        unit:"Шт",
+        quantity:[1],
+        selligPrice:[36.2],
+        color: 'red'
     }
 ]
 
