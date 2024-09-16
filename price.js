@@ -3,21 +3,21 @@ const priceImpra = [
         product:"Impra profilan Lasol B",
         unit:"Л",
         quantity:[2.5,5,20],
-        selligPrice:[208.33,378.7,1299.2],
+        selligPrice:[229.15,416.6,1429],
         color: 'black'
     },
     {
         product:"Impra profilan Teoma Holzöl",
         unit:"Л",
         quantity:[0.75,2.5],
-        selligPrice:[118.68,243.0],
+        selligPrice:[130.56,267.33],
         color: 'black'
     },
     {
         product:"Impra impralan DS 300",
         unit:"Л",
         quantity:[5,10],
-        selligPrice:[530.6,921.00],
+        selligPrice:[583.7,1013.1],
         color: 'black'
     },
     {
@@ -31,56 +31,56 @@ const priceImpra = [
         product:"Impra profilan   Innenraumlasur",
         unit:"Л",
         quantity:[0.75,2.5,20],
-        selligPrice:[125.56,306.33,2234.8],
+        selligPrice:[138.12,336.95,2458.2],
         color: 'black'
     },
     {
         product:"Impra impralan G400",
         unit:"Л",
         quantity:[2.5,5,20],
-        selligPrice:[210.96,380.28,1255.4],
+        selligPrice:[232.08,418.32,1381.0],
         color: 'black'
     },
     {
         product:"Impra profilan  Top",
         unit:"Л",
         quantity:[0.75,2.5],
-        selligPrice:[132.08,426.88],
+        selligPrice:[145.28,469.55],
         color: 'greblacken'
     },
     {
         product:"Impra profilan Holzschutzgrund B",
         unit:"Л",
         quantity:[2.5,5,20],
-        selligPrice:[174.68,302.25,999.4],
+        selligPrice:[192.15,332.5,1099.4],
         color: 'black'
     },
     {
         product:"Impralan Grund I100",
         unit:"Л",
-        quantity:[20],
-        selligPrice:[999.2],
+        quantity:[2.5,5,20],
+        selligPrice:[192.15,332.5,1099.2],
         color: 'black'
     },
     {
         product:"Impra impralan Decklack D400",
         unit:"Л",
         quantity:[20],
-        selligPrice:[1860.2],
+        selligPrice:[2251.2],
         color: 'black'
     },
     {
         product:"Impra profilan Secur Isolierlack",
         unit:"Л",
         quantity:[2.5,20],
-        selligPrice:[306.85,2021.2],
+        selligPrice:[337.53,2223.2],
         color: 'black'
     },
     {
         product:"Impra profilan Color",
         unit:"Л",
         quantity:[0.75,2.5,5],
-        selligPrice:[84.92,240.93,449.2],
+        selligPrice:[94.16,265.05,494.1],
         color: 'black'
     },
     {
