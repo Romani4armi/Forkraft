@@ -89,7 +89,7 @@ const priceImpra = [
         quantity:[5,20],
         selligPrice:[0,0],
         color: 'green',
-        evro: [6.68,7.25]
+        evro: [7.98,7.35]
     },
     
     {
@@ -98,7 +98,7 @@ const priceImpra = [
         quantity:[5,20],
         selligPrice:[0,0],
         color: 'green',
-        evro: [9.67,9.02]
+        evro: [10.64,9.92]
     },
     {
         product:"Impra impralan-Natureffekrlasur S510",
@@ -106,7 +106,7 @@ const priceImpra = [
         quantity:[5,20],
         selligPrice:[0,0],
         color: 'green',
-        evro:[10.82,10.17]
+        evro:[11.9,11.19]
     },
     {
         product:"Impra impralan-Natureffekrlasur S510 укрывной",
@@ -114,7 +114,7 @@ const priceImpra = [
         quantity:[5,20],
         selligPrice:[0,0],
         color: 'green',
-        evro:[11.9,11.19]
+        evro:[13.09,12.31]
     },
     {
         product:"Impra impralan-Decklack D150",
@@ -122,7 +122,7 @@ const priceImpra = [
         quantity:[5,20],
         selligPrice:[0,0],
         color: 'green',
-        evro:[9.65,9.02]
+        evro:[11.1,10.37]
     },
     {
         product:"Impra impralan-Vorlack V100",
@@ -130,7 +130,7 @@ const priceImpra = [
         quantity:[5,20],
         selligPrice:[0,0],
         color: 'green',
-        evro:[10.88,10.17]
+        evro:[11.97,11.19]
     },
     {
         product:"Impra impralan-Vorlack V710",
@@ -138,9 +138,16 @@ const priceImpra = [
         quantity:[5,20],
         selligPrice:[0,0],
         color: 'green',
-        evro:[12.96,11.78]
+        evro:[14.26,12.96]
     },
-  
+    {
+        product:"Impralan-Flex",
+        unit:"Шт",
+        quantity:[1],
+        selligPrice:[0],
+        color: 'green',
+        evro:[11.88]
+    },
  
     {
         product:"Кисть Mesko M12 Multicolor 50мм",
