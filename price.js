@@ -146,7 +146,7 @@ const priceImpra = [
         quantity:[1],
         selligPrice:[0],
         color: 'green',
-        evro:[11.88]
+        evro:[10.7]
     },
  
     {
