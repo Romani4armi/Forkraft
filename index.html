@@ -249,6 +249,9 @@
      .NDS_Summ_Input{
         width: 62px;
      }
+     .block_document{
+        display: flex;
+     }
      input::-webkit-outer-spin-button,
      input::-webkit-inner-spin-button {
         /* display: none; <- Crashes Chrome on hover */
@@ -346,7 +349,7 @@
     </style>
 </head>
 <body>
-    
+    <div class="block_document">
     <div class="contejner">
         <div class="kursiValut">
 
@@ -444,7 +447,13 @@
             </b></div>
             <div><b>Плательщик</b> <br><br><br><div style="border-bottom: 1px solid black;"></div><br><br><div style="border-bottom: 1px solid black;"></div><br><b>МП</b></div>
         </div>
+    </div>    
+    
+    <div style="display: none;">
+        <a href="exp.html" target="_blank"> CMR </a>
     </div>
+    </div>
+   
     
     <script src="./price.js"></script>
     <script>
