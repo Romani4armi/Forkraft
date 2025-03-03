@@ -3,84 +3,77 @@ const priceImpra = [
         product:"Impra profilan Lasol B",
         unit:"Л",
         quantity:[2.5,5,20],
-        selligPrice:[229.15,416.6,1429],
+        selligPrice:[240.60,437.35,1499.60],
         color: 'black'
     },
     {
         product:"Impra profilan Teoma Holzöl",
         unit:"Л",
         quantity:[0.75,2.5],
-        selligPrice:[130.56,267.33],
+        selligPrice:[137.08,280.68],
         color: 'black'
     },
     {
         product:"Impra impralan DS 300",
         unit:"Л",
         quantity:[5,10],
-        selligPrice:[583.7,1013.1],
-        color: 'black'
-    },
-    {
-        product:"Impra profilan-opac",
-        unit:"Л",
-        quantity:[5,10],
-        selligPrice:[530.6,921.00],
+        selligPrice:[612.90,1063.8],
         color: 'black'
     },
     {
         product:"Impra profilan   Innenraumlasur",
         unit:"Л",
         quantity:[0.75,2.5,20],
-        selligPrice:[138.12,336.95,2458.2],
+        selligPrice:[145.04,353.8,2581.2],
         color: 'black'
     },
     {
         product:"Impra impralan G400",
         unit:"Л",
         quantity:[2.5,5,20],
-        selligPrice:[232.08,418.32,1381.0],
+        selligPrice:[243.68,439.24,1450.00],
         color: 'black'
     },
     {
         product:"Impra profilan  Top",
         unit:"Л",
         quantity:[0.75,2.5],
-        selligPrice:[145.28,469.55],
+        selligPrice:[152.56,493.05],
         color: 'greblacken'
     },
     {
         product:"Impra profilan Holzschutzgrund B",
         unit:"Л",
         quantity:[2.5,5,20],
-        selligPrice:[192.15,332.5,1099.4],
+        selligPrice:[201.75,349.10,1154.2],
         color: 'black'
     },
     {
         product:"Impralan Grund I100",
         unit:"Л",
         quantity:[2.5,5,20],
-        selligPrice:[192.15,332.5,1099.2],
+        selligPrice:[201.75,349.10,1154.2],
         color: 'black'
     },
     {
         product:"Impra impralan Decklack D400",
         unit:"Л",
         quantity:[20],
-        selligPrice:[2251.2],
+        selligPrice:[2363.8],
         color: 'black'
     },
     {
         product:"Impra profilan Secur Isolierlack",
         unit:"Л",
         quantity:[2.5,20],
-        selligPrice:[337.53,2223.2],
+        selligPrice:[354.4,2334.4],
         color: 'black'
     },
     {
         product:"Impra profilan Color",
         unit:"Л",
         quantity:[0.75,2.5,5],
-        selligPrice:[94.16,265.05,494.1],
+        selligPrice:[98.88,278.28,518.85],
         color: 'black'
     },
     {
@@ -153,112 +146,112 @@ const priceImpra = [
         product:"Кисть Mesko M12 Multicolor 50мм",
         unit:"Шт",
         quantity:[1],
-        selligPrice:[47.59],
+        selligPrice:[49.97],
         color: 'blue'
     },
     {
         product:"Кисть Mesko M12 Multicolor 75мм",
         unit:"Шт",
         quantity:[1],
-        selligPrice:[68.78],
+        selligPrice:[72.22],
         color: 'blue'
     },
     {
         product:"Кисть Mesko M12 Multicolor 100мм",
         unit:"Шт",
         quantity:[1],
-        selligPrice:[78.35],
+        selligPrice:[82.27],
         color: 'blue'
     },
     {
         product:"Кисть  Mesko M4 Lasur 40мм",
         unit:"Шт",
         quantity:[1],
-        selligPrice:[38.44],
+        selligPrice:[40.36],
         color: 'blue'
     },
     {
         product:"Кисть  Mesko M4 Lasur 60мм",
         unit:"Шт",
         quantity:[1],
-        selligPrice:[53.08],
+        selligPrice:[55.73],
         color: 'blue'
     },
     {
         product:"Кисть Mesko M4 Lasur 75мм",
         unit:"Шт",
         quantity:[1],
-        selligPrice:[69.47],
+        selligPrice:[72.94],
         color: 'blue'
     },
     {
         product:"Кисть  Mesko M4 Lasur 100мм",
         unit:"Шт",
         quantity:[1],
-        selligPrice:[66.91],
+        selligPrice:[70.25],
         color: 'blue'
     },
     {
         product:"Кисть  Mesko M4 Lasur 120мм",
         unit:"Шт",
         quantity:[1],
-        selligPrice:[80.54],
+        selligPrice:[84.57],
         color: 'blue'
     },
     {
         product:"Кисть  Mesko M3 Aqua 100мм",
         unit:"Шт",
         quantity:[1],
-        selligPrice:[79.32],
+        selligPrice:[83.28],
         color: 'blue'
     },
     {
         product:"Кисть  Mesko M3 Aqua 120мм",
         unit:"Шт",
         quantity:[1],
-        selligPrice:[86.91],
+        selligPrice:[91.25],
         color: 'blue'
     },
     {
         product:"Кисть  Mesko Wandprofi 70мм",
         unit:"Шт",
         quantity:[1],
-        selligPrice:[56.43],
+        selligPrice:[59.26],
         color: 'blue'
     },
     {
         product:"Кисть  Mesko Wandprofi 100мм",
         unit:"Шт",
         quantity:[1],
-        selligPrice:[60.45],
+        selligPrice:[63.48],
         color: 'blue'
     },
     {
         product:"Кисть  Mesko Wandprofi 120мм",
         unit:"Шт",
         quantity:[1],
-        selligPrice:[68.47],
+        selligPrice:[71.89],
         color: 'blue'
     },
     {
         product:"Кисть  Mesko Wandprofi 140мм",
         unit:"Шт",
         quantity:[1],
-        selligPrice:[81.10],
+        selligPrice:[85.15],
         color: 'blue'
     },
     {
         product:"Щётка   Mesko Wandprofi 205мм",
         unit:"Шт",
         quantity:[1],
-        selligPrice:[168.9],
+        selligPrice:[177.35],
         color: 'blue'
     },
     {
         product:"Щётка  Mesko Wandprofi 300мм",
         unit:"Шт",
         quantity:[1],
-        selligPrice:[235.17],
+        selligPrice:[246.93],
         color: 'blue'
     },
     {
@@ -272,14 +265,14 @@ const priceImpra = [
         product:"REMMERS ACRYL 100",
         unit:"Шт",
         quantity:[1],
-        selligPrice:[37.18],
+        selligPrice:[42.94],
         color: 'red'
     },
     {
         product:"BHC ACRYL PRO",
         unit:"Шт",
         quantity:[1],
-        selligPrice:[36.2],
+        selligPrice:[39.8],
         color: 'red'
     }
 ]
