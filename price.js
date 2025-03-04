@@ -311,4 +311,4 @@ updateArrFF = kurs =>{
     })
 }
 
-updateArrFF(4)
+updateArrFF(4.28)
