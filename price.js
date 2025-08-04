@@ -10,70 +10,70 @@ const priceImpra = [
         product:"Impra profilan Teoma Holzöl",
         unit:"Л",
         quantity:[0.75,2.5],
-        selligPrice:[137.08,280.68],
+        selligPrice:[141.20,289.13],
         color: 'black'
     },
     {
         product:"Impra impralan DS 300",
         unit:"Л",
         quantity:[5,10],
-        selligPrice:[612.90,1063.8],
+        selligPrice:[631.3,1095.7],
         color: 'black'
     },
     {
         product:"Impra profilan   Innenraumlasur",
         unit:"Л",
         quantity:[0.75,2.5,20],
-        selligPrice:[145.04,353.8,2581.2],
+        selligPrice:[149.4,364.4,2658.6],
         color: 'black'
     },
     {
         product:"Impra impralan G400",
         unit:"Л",
         quantity:[2.5,5,20],
-        selligPrice:[243.68,439.24,1450.00],
+        selligPrice:[251.00,452.4,1493.60],
         color: 'black'
     },
     {
         product:"Impra profilan  Top",
         unit:"Л",
         quantity:[0.75,2.5],
-        selligPrice:[152.56,493.05],
+        selligPrice:[157.12,507.85],
         color: 'greblacken'
     },
     {
         product:"Impra profilan Holzschutzgrund B",
         unit:"Л",
         quantity:[2.5,5,20],
-        selligPrice:[201.75,349.10,1154.2],
+        selligPrice:[207.8,359.55,1189.0],
         color: 'black'
     },
     {
         product:"Impralan Grund I100",
         unit:"Л",
         quantity:[2.5,5,20],
-        selligPrice:[201.75,349.10,1154.2],
+        selligPrice:[207.8,359.55,1189.0],
         color: 'black'
     },
     {
         product:"Impra impralan Decklack D400",
         unit:"Л",
         quantity:[20],
-        selligPrice:[2363.8],
+        selligPrice:[2434.8],
         color: 'black'
     },
     {
         product:"Impra profilan Secur Isolierlack",
         unit:"Л",
         quantity:[2.5,20],
-        selligPrice:[354.4,2334.4],
+        selligPrice:[365.05,2404.6],
         color: 'black'
     },
     {
         product:"Impra profilan Color",
         unit:"Л",
         quantity:[0.75,2.5,5],
-        selligPrice:[98.88,278.28,518.85],
+        selligPrice:[101.84,286.65,534.4],
         color: 'black'
     },
     {
